@@ -38,7 +38,7 @@ namespace ClickandCollect
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Ville param = this.GetObjetVille(Ville.CollClassesVille,comboBox1.Text.Split('-')[0]);
+            Ville param = GestionCollection.GetObjet<Ville>(Ville.CollClassesVille,comboBox1.Text.Split('-')[0]);
             textBox1.Text = param.Id.ToString();
             textBox2.Text = param.Nom;
             textBox3.Text = param.CodePostal.ToString();
@@ -61,44 +61,19 @@ namespace ClickandCollect
 
             dataGridView1.DataSource = dt;
         }
-        private Ville GetObjetVille(List<Ville>param,string param2 )
-        {
-            Ville result = null;
-            foreach(Ville uneVille in param)
-            {
-                if (uneVille.Id == Convert.ToInt32( param2))
-                {
-                    result = uneVille;
-                    break;
-                }
-            }
-            return result;
-        }
-
-        private Box GetObjetBox(List<Box> param, string param2)
-        {
-            Box result = null;
-            foreach (Box uneBox in param)
-            {
-                if (uneBox.Id == Convert.ToInt32(param2))
-                {
-                    result = uneBox;
-                    break;
-                }
-            }
-            return result;
-        }
+        
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox2.Text == "" || textBox3.Text == "") return;
-            new Ville(GestionCollection.GetNouvelIndex(Ville.CollClassesVille),textBox2.Text,Convert.ToInt32(textBox3.Text));
+            new Ville(textBox2.Text,Convert.ToInt32(textBox3.Text));
             this.RemplissageCbx();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Ville param = this.GetObjetVille(Ville.CollClassesVille, textBox1.Text);
+            Ville param = GestionCollection.GetObjet<Ville>(Ville.CollClassesVille, textBox1.Text);
             if (textBox1.Text == "") return;
             param.Nom = textBox2.Text;
             param.CodePostal = Convert.ToInt32 (textBox3.Text);
@@ -108,8 +83,8 @@ namespace ClickandCollect
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             DataGridViewRow ligne = dataGridView1.Rows[e.RowIndex];
-            Ville param = this.GetObjetVille(Ville.CollClassesVille, textBox1.Text);
-            Box laBox = this.GetObjetBox(param.LesBox, ligne.Cells[0].Value.ToString());
+            Ville param = GestionCollection.GetObjet<Ville>(Ville.CollClassesVille, textBox1.Text);
+            Box laBox = GestionCollection.GetObjet<Box>(param.LesBox, ligne.Cells[0].Value.ToString());
 
             Form Form2 = new Form2(laBox);
             Form2.ShowDialog();

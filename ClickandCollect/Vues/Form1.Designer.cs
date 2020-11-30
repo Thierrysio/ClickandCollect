@@ -42,7 +42,15 @@ namespace ClickandCollect
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.boxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.compartimentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livreurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -159,6 +167,57 @@ namespace ClickandCollect
             this.label4.TabIndex = 12;
             this.label4.Text = "Boxs";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.boxToolStripMenuItem,
+            this.compartimentToolStripMenuItem,
+            this.colisToolStripMenuItem,
+            this.clientToolStripMenuItem,
+            this.livreurToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(475, 24);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(41, 20);
+            this.toolStripMenuItem1.Text = "Ville";
+            // 
+            // boxToolStripMenuItem
+            // 
+            this.boxToolStripMenuItem.Name = "boxToolStripMenuItem";
+            this.boxToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.boxToolStripMenuItem.Text = "Box";
+            // 
+            // compartimentToolStripMenuItem
+            // 
+            this.compartimentToolStripMenuItem.Name = "compartimentToolStripMenuItem";
+            this.compartimentToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.compartimentToolStripMenuItem.Text = "Compartiment";
+            // 
+            // colisToolStripMenuItem
+            // 
+            this.colisToolStripMenuItem.Name = "colisToolStripMenuItem";
+            this.colisToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.colisToolStripMenuItem.Text = "Colis";
+            // 
+            // clientToolStripMenuItem
+            // 
+            this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.clientToolStripMenuItem.Text = "Client";
+            // 
+            // livreurToolStripMenuItem
+            // 
+            this.livreurToolStripMenuItem.Name = "livreurToolStripMenuItem";
+            this.livreurToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.livreurToolStripMenuItem.Text = "Livreur";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,10 +236,14 @@ namespace ClickandCollect
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,6 +264,13 @@ namespace ClickandCollect
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem boxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem compartimentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem livreurToolStripMenuItem;
     }
 }
 

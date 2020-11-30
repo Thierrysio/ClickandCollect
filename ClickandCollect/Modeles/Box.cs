@@ -32,6 +32,7 @@ namespace ClickandCollect.Modeles
             _lesCompartiments = new List<Compartiment>();
             collClasseBox.Add(this);
             _laVille = laVille;
+            LaVille.AjoutBox(this);
         }
         #endregion
 

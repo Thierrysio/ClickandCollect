@@ -17,9 +17,9 @@ namespace ClickandCollect.Modeles
             private List<Box> _lesBox;
             #endregion
             #region Constructeurs
-            public Ville(int id, string nom, int codePostal)
+            public Ville( string nom, int codePostal)
             {
-                _id = id;
+                _id = Utilitaires.GestionCollection.GetNouvelIndex<Ville>(Ville.CollClassesVille);
                 _nom = nom;
                 _codePostal = codePostal;
                 _lesBox = new List<Box>();
@@ -33,7 +33,10 @@ namespace ClickandCollect.Modeles
             public List<Box> LesBox { get => _lesBox; set => _lesBox = value; }
             #endregion
             #region Methodes
-
+        public void AjoutBox(Box param)
+        {
+            this.LesBox.Add(param);
+        }
             #endregion
         }
     }
